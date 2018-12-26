@@ -1,0 +1,14 @@
+# IDE directories
+.vs
+
+# build directories
+bin
+obj
+
+# test directories
+TestResults
+GeneratedReports
+Packages
+
+# files
+*.bak
