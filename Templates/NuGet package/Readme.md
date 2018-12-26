@@ -9,7 +9,7 @@ This template will help you getting started quickly with developing a new NuGet 
 ## Prerequisites
 
 For using this template you'll need:
-* Microsoft Windows 10,
+* Microsoft Windows 10,**
 * Microsoft Visual Studio Community or higher.
 
 Suggested Visual Studio extensions:
@@ -32,7 +32,8 @@ Follow these steps:
 * manually update references in solution and project files,
 * create a new assembly signing key (`project template properties > Signing > check "Sign the assembly" > choose "New" > assign key name and password`) and make sure you do not publish the key in a public repository,
 * update project information in [ProjectTemplate.csproj](./Source/ProjectTemplate/ProjectTemplate.csproj),
-* install and update NuGet packages by running `Update-Package -reinstall` in Package Manager console in Visual Studio (be sure to update referenced NuGet package versions in [publishNuGetPackage.ps1](./Build/getUnitTestCodeCoverage.ps1) if necessary).
+* install and update NuGet packages by running `Update-Package -reinstall` in Package Manager console in Visual Studio (be sure to update referenced NuGet package versions in [publishNuGetPackage.ps1](./Build/getUnitTestCodeCoverage.ps1) if necessary),
+* replace the contents of this file with your project description.
 
 
 ### Setting editor and code styling preferences
