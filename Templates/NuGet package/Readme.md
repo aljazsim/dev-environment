@@ -32,7 +32,7 @@ Follow these steps:
 * manually update references in solution and project files,
 * create a new assembly signing key (`project template properties > Signing > check "Sign the assembly" > choose "New" > assign key name and password`) and make sure you do not publish the key in a public repository,
 * update project information in [ProjectTemplate.csproj](./Source/ProjectTemplate/ProjectTemplate.csproj),
-* install and update NuGet packages by running `Update-Package -reinstall` in Package Manager console in Visual Studio (be sure to update NuGet versions in [publishNuGetPackage.ps1](./Build/getUnitTestCodeCoverage.ps1) if necessary),+.
+* install and update NuGet packages by running `Update-Package -reinstall` in Package Manager console in Visual Studio (be sure to update referenced NuGet package versions in [publishNuGetPackage.ps1](./Build/getUnitTestCodeCoverage.ps1) if necessary).
 
 
 ### Setting editor and code styling preferences
@@ -66,7 +66,7 @@ Be sure to replace respective project names. If you'll be changing directory str
 You can publish the package to NuGet by running the following command in PowerShell:
 
 ```powershell
-`.\Build\publishNuGetPackage.ps1 -projectName "ProjectName" -projectVersion "1.2.3" -nugetKey "xxxxxxxxxx"`
+.\Build\publishNuGetPackage.ps1 -projectName "ProjectName" -projectVersion "1.2.3" -nugetKey "xxxxxxxxxx"
 ```
 
 This will:
