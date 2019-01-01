@@ -2,17 +2,19 @@
 
 This template will help you getting started quickly with developing a new NuGet package. It allows you to develop a .NET library written in C# with enforcing coding styles, unit tests with code coverage and PowerShell scripts for deploying the package.
 
-| Development platform | IDE                         | Framework | Programming languages | Coding standards | Testing | Code coverage              |
-| -------------------- | --------------------------- | --------- | --------------------- | ---------------- | ------- | -------------------------- |
-| Microsoft Windows 10 | Microsoft VisualStudio 2017 | .NET Core | C#                    | StyleCop         | MSTest  | OpenCover, ReportGenerator |
+| Development platform | IDE                         | Framework | Programming language | Coding standards | Testing | Code coverage              |
+| -------------------- | --------------------------- | --------- | -------------------- | ---------------- | ------- | -------------------------- |
+| Microsoft Windows 10 | Microsoft VisualStudio 2017 | .NET Core | C#                   | StyleCop         | MSTest  | OpenCover, ReportGenerator |
 
 ## Prerequisites
 
 For using this template you'll need:
-* Microsoft Windows 10,**
+
+* Microsoft Windows 10,
 * Microsoft Visual Studio Community or higher.
 
 Suggested Visual Studio extensions:
+
 * [GhostDoc](https://submain.com/products/ghostdoc.aspx) for easily generating code documentation,
 * [CodeMaid](http://www.codemaid.net/) for easily organizing, formatting and navigation code,
 * [Productivity Power Tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2017) and
@@ -23,6 +25,7 @@ Suggested Visual Studio extensions:
 ### Setting up the environment
 
 Follow these steps:
+
 * create a source control repository,
 * clone the repository locally,
 * download the contents of this directory only (by downloading a ZIP archive from GitHub) to the root directory of your repository,
@@ -37,16 +40,20 @@ Follow these steps:
 
 
 ### Setting editor and code styling preferences
+
 * you can change your IDE editor and code styling preferences in [.editorconfig](./Source/.editorconfig),
 * you can change StyleCop code styling preferences in [stylecop.ruleset](./Source/stylecop.ruleset) and [stylecop.json](./Source/stylecop.json).
 
 ### NuGet package location
+
 You can change NuGet relates settings like where to store related NuGet packages in [nuget.config](./Source/nuget.config).
 
 ### Running unit tests
+
 You can run unit tests from the Test Explorer in Visual Studio.
 
-### Generating code coverage report
+### Generating unit tests code coverage report
+
 You can generate the code coverage report by running the following command in PowerShell:
 
 ```powershell
@@ -54,6 +61,7 @@ You can generate the code coverage report by running the following command in Po
 ```
 
 This will:
+
 * remove old reports,
 * compile the solution,
 * run unit tests,
@@ -64,6 +72,7 @@ This will:
 Be sure to replace respective project names. If you'll be changing directory structure, be sure to update the PowerShell script as well.
 
 ### Publishing NuGet package
+
 You can publish the package to NuGet by running the following command in PowerShell:
 
 ```powershell
@@ -71,11 +80,13 @@ You can publish the package to NuGet by running the following command in PowerSh
 ```
 
 This will:
+
 *  remove StyleCop and FxCop references,
 *  compile the solution and
 *  publish build artifacts to NuGet.org.
 
-Be sure you to:
+Be sure to:
+
 * have a valid NuGet account,
 * replace project name,
 * replace project version (must match the project version in `project template properties > Package > Package version, Assembly version and Assembly file version`),
