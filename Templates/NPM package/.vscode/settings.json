@@ -1,0 +1,28 @@
+{
+    "files.exclude": {
+        ".vscode": false,
+        ".nyc_output": false,
+        "coverage": false,
+        "dist": false,
+        "doc": false,
+        "node_modules": false,
+        ".editorconfig": false,
+        ".gitignore": false,
+        ".npmignore": false,
+        "npm-debug.log": false,
+        "license": false,
+        "**/*.bak": false,
+        "**/*.json": false,
+        "**/*-lock.json": false,
+        "**/*.js": false,
+        "**/*.js.map": false
+    },
+    "search.exclude": {
+        ".vscode": true,
+        ".nyc_output": true,
+        ".coverage": true,
+        "dist": true,
+        "node_modules": true,
+    },
+    "git.ignoreLimitWarning": true
+}

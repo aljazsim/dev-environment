@@ -1,0 +1,29 @@
+[
+    // terminate current task
+    {
+        "key": "ctrl+shift+x",
+        "command": "workbench.action.tasks.terminate"
+    },
+    // run build
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.tasks.build"
+    },
+    // run lint
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "lint"
+    },
+    // run unit tests
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.tasks.test"
+    },
+    // run e2e tests
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.tasks.runTask",
+        "args": "e2e"
+    },
+]
