@@ -66,7 +66,7 @@ By default:
 
 * the VS Code Settings: [./vscode](./vscode),
 * the package source: [./source](./source),
-* the package unit test: [./test](./test),
+* the package unit tests: [./test](./test),
 * the package build artifacts: [./dist](./dist) (excluded from source control),
 * the npm modules: [./node_modules](./node_modules) (excluded from source control),
 * the package test coverage  [./coverage](./coverage) and [./nyc_output](./nyc_output) (excluded from source control),
@@ -74,7 +74,8 @@ By default:
 If yo want to change your directory structure, be sure to update references in:
 
 * [./tsconfig.json](./tsconfig.json) (build output directory),
-* [./package.json](./package.json) (config file locations).
+* [./package.json](./package.json) (config file locations),
+* [./.vscode/launch.json](./.vscode/launch.json) (unit test pattern).
 
 ### Updating NPM package references
 
@@ -88,13 +89,6 @@ You can build your project by:
 
 * running command `npm run build` in the VS Code terminal or
 * using shortcut `Ctr + Shift + B` (if you've installed the keybindings, see Tips and tricks).
-
-### Enforcing code style
-
-You can check if your code conforms to code style rules defined in [tslint.json](./tslint.json):
-
-* running command `npm run lint` in the VS Code terminal or
-* using shortcut `Ctr + Shift + L` (if you've installed the keybindings, see Tips and tricks).
 
 #### Build in watch mode
 
@@ -111,6 +105,13 @@ Build watch compile error:
 ![Build watch compile error](./doc/build-watch-2.png)
 
 Just Ctrl + Click on the line number and correct the error, save the file and the project will automatically re-compile.
+
+### Enforcing code style
+
+You can check if your code conforms to code style rules defined in [tslint.json](./tslint.json) by:
+
+* running command `npm run lint` in the VS Code terminal or
+* using shortcut `Ctr + Shift + L` (if you've installed the keybindings, see Tips and tricks).
 
 ### Running unit tests
 
@@ -145,9 +146,15 @@ If there's a test failure, just Ctrl + Click on the line number and correct the 
 
 ![Run unit tests in watch mode failure](./doc/run-unit-tests-watch-failure.png)
 
+#### Debugging unit tests
+
+In order to debug your code, just set the break point and press F5 or click the *Mocha tests* run icon in the debug toolbar:
+
+![Debugging](./doc/debugging.png)
+
 ### Generating unit tests code coverage report
 
-Unit tests code coverage report will help you identified which parts of your code are not getting tests by your unit tests.
+Unit tests code coverage report will help you identified which parts of your code are not getting tested by your unit tests.
 
 You can run unit tests code coverage report by:
 
@@ -157,7 +164,7 @@ This command will run [istambul](https://istanbul.js.org/) test coverage report 
 
 ![Run unit tests coverage](./doc/run-unit-tests-coverage.png)
 
-When done open it in your default browser.
+When done open it in your default browser so you can investigate your code coverage further.
 
 ![Run unit tests coverage in browser](./doc/run-unit-tests-coverage-browser.png)
 
@@ -167,7 +174,7 @@ In the VS Code console run:
 
 `npm login`
 
-and type in your credentials. Then publish the package by running:
+and enter your NPM account credentials. Then publish the package by running:
 
 `npm publish`
 
@@ -175,22 +182,23 @@ Be sure to:
 
 * list all functionality to be exported in the package in [./source/index.ts](./source/index.ts),
 * have a valid NPM account,
-* all project settings in [package.json](./package.json) are set correctly (project name, project version, project author, etc.),
+* have correctly set all project settings in [package.json](./package.json) (project name, project version, project author, etc.),
+* increase package version in [package.json](./package.json),
 * check [.npmignore](./.npmignore) to make sure the right files are being ignored when packing the project.
 
 ### Testing your package before publishing
 
-You can pack the package by running:
+You can generate a locally package by running:
 
 `npm run pack`
 
-This will generate a *.tgs archive containing all files that will be published with the project. You can control these files in [.npmignore](./.npmignore).
+This will generate a *.tgs archive containing all files that will be published with the project. You can control these files in [.npmignore](./.npmignore). Make sure everything that should be published is present in the archive and that thre are no redundant files.
 
 You can publish the package locally by running:
 
 `npm link`
 
-This will create a system link globally on your computer simulating it being published on NPM.
+This will create a *symlink* globally on your computer simulating the package being published on NPM.
 
 ![NPM package link](./doc/npm-package-link.png)
 
@@ -198,7 +206,7 @@ You can then create a test project that will consume the module to see if it beh
 
 `npm link npm-package-name`
 
-This will install the package in your test project node_modules. Then you can use it as you normally would:
+This will install the symlink in your test project node_modules. Then you can use it as you normally would:
 
 ![NPM package link test project](./doc/test-project.png)
 
