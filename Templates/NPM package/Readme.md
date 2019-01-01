@@ -1,4 +1,4 @@
-# NuGet package template
+# NPM package template
 
 This template will help you getting started quickly with developing a new NuGet package with enforcing coding styles, unit tests with code coverage and instructions for deploying the package.
 
