@@ -1,6 +1,6 @@
 # NuGet package template
 
-This template will help you getting started quickly with developing a new NuGet package. It allows you to develop a .NET library written in C# with enforcing coding styles, unit tests with code coverage and PowerShell scripts for deploying the package.
+This template will help you getting started quickly with developing a new NuGet package with enforcing coding styles, unit tests with code coverage and instructions for deploying the package.
 
 | Development platform | IDE                | Framework | Programming language | Coding standards | Testing     | Code coverage |
 | -------------------- | ------------------ | --------- | -------------------- | ---------------- | ----------- | ------------- |
