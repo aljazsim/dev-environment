@@ -1,6 +1,6 @@
 # NPM package template
 
-This template will help you getting started quickly with developing a new NuGet package with enforcing coding styles, unit tests with code coverage and instructions for deploying the package.
+This template will help you getting started quickly with developing a new NPM package with enforcing coding styles, unit tests with code coverage and instructions for deploying the package.
 
 | Development platform | IDE                | Framework | Programming language | Coding standards | Testing     | Code coverage |
 | -------------------- | ------------------ | --------- | -------------------- | ---------------- | ----------- | ------------- |
