@@ -104,7 +104,7 @@ Build watch compile error:
 
 ![Build watch compile error](./doc/build-watch-2.png)
 
-Just Ctrl + Click on the line number and correct the error, save the file and the project will automatically re-compile.
+Just Ctrl + Click on the line number, correct the error, save the file and the project will automatically re-compile.
 
 ### Enforcing code style
 
@@ -122,7 +122,7 @@ You can run your [mocha](https://mochajs.org/) unit tests by:
 
 ![Run unit tests](./doc/run-unit-tests.png)
 
-If there's a test failure, just Ctrl + Click on the line number and correct the error and re-run unit tests.
+If there's a test failure, just Ctrl + Click on the line number, correct the error and re-run unit tests.
 
 ![Run unit tests](./doc/run-unit-tests-failure.png)
 
@@ -132,7 +132,7 @@ You can run unit tests in *watch mode* by:
 
 * running `npm run test:watch` in the VS Code terminal.
 
-This will monitor your unit test files for changes and automatically re-compile and re-run unit tests whenever a test file change is detected.
+This will monitor your unit test files for changes, automatically re-compile and re-run unit tests whenever a test file change is detected.
 
 ![Run unit tests in watch mode](./doc/run-unit-tests-watch.png)
 
@@ -142,7 +142,7 @@ The unit test report in watch mode is configured to show minimal output and show
 "test:watch": "ts-mocha --project ./tsconfig.json --watch --watch-extensions ts --reporter min --bail --recursive ./test/**/*.ts",
 ```
 
-If there's a test failure, just Ctrl + Click on the line number and correct the error and re-run unit tests.
+If there's a test failure, just Ctrl + Click on the line number, correct the error and re-run unit tests.
 
 ![Run unit tests in watch mode failure](./doc/run-unit-tests-watch-failure.png)
 
